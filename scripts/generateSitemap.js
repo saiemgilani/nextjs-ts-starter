@@ -40,7 +40,7 @@ async function generateSiteMap() {
           .replace('.md', '')
           .replace('posts/', '/blog/')
           .replace('articles/','/articles/')
-          .replace('reference','/reference/')
+          .replace('reference/','/reference/')
           .replace('/index', '')
         const route = path === '/index' ? '' : path
         return `

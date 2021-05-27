@@ -3,6 +3,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import SunIcon from '@material-ui/icons/WbSunnyOutlined'
 import MoonIcon from '@material-ui/icons/Brightness2Outlined'
 import CodeIcon from '@material-ui/icons/Code'
+import DescriptionIcon from '@material-ui/icons/Description'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import AppBar from '@material-ui/core/AppBar'
@@ -61,6 +62,12 @@ export const TopBar = (): ReactElement => {
           </a>
         </Link>
         <div className={classes.toolbarContent}>
+          <Link href="/references">
+            <Button variant="text" color="inherit">
+              <DescriptionIcon />
+              &nbsp;Reference
+            </Button>
+          </Link>
           <Link href="/topics">
             <Button variant="text" color="inherit">
               <CodeIcon />

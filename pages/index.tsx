@@ -1,4 +1,4 @@
-import { getSortedPostsData, getSortedTopics } from '../src/lib/posts'
+import { getSortedReferencesData, getSortedTopics } from '../src/lib/references'
 import { GetStaticPropsResult } from 'next'
 import { PostData } from '../src/types/posts'
 import React, { ReactElement } from 'react'
@@ -7,11 +7,11 @@ import styles from '../styles/Shared.module.css'
 import Box from '@material-ui/core/Box'
 import TopicsDisplay from '../src/components/TopicsDisplay'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-import { Preview } from '../src/components/Preview'
+import { PreviewReference } from '../src/components/PreviewReference'
 import Head from 'next/head'
 import { NAME, NAME_AND_DOMAIN, BASE_URL } from '../src/types/constants'
 
-const Home = ({ postsData, sortedTopics }: { postsData: PostData[]; sortedTopics: string[] }): ReactElement => {
+const Home = ({ ReferenceData, sortedTopics }: { ReferenceData: ReferenceData[]; sortedTopics: string[] }): ReactElement => {
   const large = useMediaQuery('(min-width:700px)')
 
   return (
@@ -20,7 +20,7 @@ const Home = ({ postsData, sortedTopics }: { postsData: PostData[]; sortedTopics
         <title>{NAME}</title>
         <meta
           name="description"
-          content={`${NAME}.`}
+          content={`${NAME}`}
         />
       </Head>
       <Grid container>
@@ -28,16 +28,13 @@ const Home = ({ postsData, sortedTopics }: { postsData: PostData[]; sortedTopics
           <Box p={5}>
             <Typography variant={large ? 'h1' : 'h4'}>{NAME_AND_DOMAIN}</Typography>
             <Typography className={styles.secondHeading} variant={large ? 'h3' : 'h6'}>
-              R blog.
+              R package.
             </Typography>
           </Box>
         </Grid>
         <Grid item xs={12}>
-          <TopicsDisplay topics={sortedTopics} n={5} />
-        </Grid>
-        <Grid item xs={12}>
           <Box pt={3}>
-            <Preview posts={postsData} />
+            <PreviewReference references={ReferenceData} />
           </Box>
         </Grid>
       </Grid>
@@ -47,15 +44,15 @@ const Home = ({ postsData, sortedTopics }: { postsData: PostData[]; sortedTopics
 
 export const getStaticProps = async (): Promise<
   GetStaticPropsResult<{
-    postsData: PostData[]
+    ReferenceData: ReferenceData[]
     sortedTopics: string[]
   }>
 > => {
   const sortedTopics = getSortedTopics()
-  const postsData = getSortedPostsData()
+  const ReferenceData = getSortedReferencesData()
   return {
     props: {
-      postsData: postsData,
+      ReferenceData: ReferenceData,
       sortedTopics,
     },
   }
