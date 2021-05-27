@@ -5,7 +5,14 @@ const matter = require('gray-matter')
 const BASE_URL = new URL('https://saiemgilani.github.io/wehoop/');
 
 async function generateSiteMap() {
-  const patterns = ['pages/**/*.tsx', '!pages/_*.tsx', `!pages/**/\\[*\\].tsx`, '!pages/404.tsx', 'posts/*.md']
+  const patterns = [
+    'pages/**/*.tsx', 
+    '!pages/_*.tsx', 
+    `!pages/**/\\[*\\].tsx`, 
+    '!pages/404.tsx', 
+    'posts/*.md',
+    'reference/*.md',
+    'articles/*.md']
   let pages = await globby(patterns)
 
   const fileNames = fs.readdirSync('posts')
@@ -32,6 +39,8 @@ async function generateSiteMap() {
           .replace('.tsx', '')
           .replace('.md', '')
           .replace('posts/', '/blog/')
+          .replace('articles/','/articles/')
+          .replace('reference','/reference/')
           .replace('/index', '')
         const route = path === '/index' ? '' : path
         return `
