@@ -50,7 +50,7 @@ export const getStaticProps = async (): Promise<
     referencesData: ReferenceData[]
   }>
 > => {
-  const sortedTopics = null
+  const sortedTopics = ['']
   const referencesData = getSortedReferencesData()
 
   return {

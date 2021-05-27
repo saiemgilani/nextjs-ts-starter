@@ -34,7 +34,7 @@ export const getStaticProps = async (): Promise<
     articlesData: ArticleData[]
   }>
 > => {
-  const sortedTopics = null
+  const sortedTopics = ['']
   const articlesData = getSortedArticlesData()
 
   return {
