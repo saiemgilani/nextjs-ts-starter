@@ -6,7 +6,7 @@ import React, { ReactElement } from 'react'
 import { Grid } from '@material-ui/core'
 import Box from '@material-ui/core/Box'
 import { ReferenceData } from '../../src/types/references'
-import { PreviewReference } from '../../src/components/PreviewReferences'
+import { PreviewReference } from '../../src/components/PreviewReference'
 import { PageHeading } from '../../src/components/PageHeading'
 import Head from 'next/head'
 
