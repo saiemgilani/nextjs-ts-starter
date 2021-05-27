@@ -45,16 +45,16 @@ const getArticleFromFile = (fullPath: string, id: string, includeContent = false
   } as ArticleData
 }
 
-export const getSortedTopics = (): string[] => {
-  const articles = getSortedArticlesData()
+// export const getSortedTopics = (): string[] => {
+//   const articles = getSortedArticlesData()
 
-  const allTopics = articles
+//   const allTopics = articles
 
-  const map: Record<string, number> = {}
+//   const map: Record<string, number> = {}
 
-  allTopics.map((t) => {
-    map[t] = allTopics.filter((topic) => t === topic).length
-  })
+//   allTopics.map((t) => {
+//     map[t] = allTopics.filter((topic) => t === topic).length
+//   })
 
-  return Array.from(new Set(allTopics)).sort((a, b) => map[b] - map[a])
-}
+//   return Array.from(new Set(allTopics)).sort((a, b) => map[b] - map[a])
+// }

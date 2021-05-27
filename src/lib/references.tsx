@@ -41,20 +41,20 @@ const getReferenceFromFile = (fullPath: string, id: string, includeContent = fal
     id,
     ...matterResult.data,
     content: includeContent ? matterResult.content : null,
-    // topics: matterResult.data.topics.split(','),
+    topics: matterResult.data.topics.split(','),
   } as ReferenceData
 }
 
-export const getSortedTopics = (): string[] => {
-  const references = getSortedReferencesData()
+// export const getSortedTopics = (): string[] => {
+//   const references = getSortedReferencesData()
 
-  const allTopics = references
+//   const allTopics = references
 
-  const map: Record<string, number> = {}
+//   const map: Record<string, number> = {}
 
-  allTopics.map((t) => {
-    map[t] = allTopics.filter((topic) => t === topic).length
-  })
+//   allTopics.map((t) => {
+//     map[t] = allTopics.filter((topic) => t === topic).length
+//   })
 
-  return Array.from(new Set(allTopics)).sort((a, b) => map[b] - map[a])
-}
+//   return Array.from(new Set(allTopics)).sort((a, b) => map[b] - map[a])
+// }
