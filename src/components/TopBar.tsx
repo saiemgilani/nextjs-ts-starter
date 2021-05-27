@@ -65,7 +65,13 @@ export const TopBar = (): ReactElement => {
           <Link href="/references">
             <Button variant="text" color="inherit">
               <DescriptionIcon />
-              &nbsp;Reference
+              &nbsp;Funcs
+            </Button>
+          </Link>
+          <Link href="/articles">
+            <Button variant="text" color="inherit">
+              <DescriptionIcon />
+              &nbsp;Articles
             </Button>
           </Link>
           <Link href="/topics">
