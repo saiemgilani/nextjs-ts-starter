@@ -6,7 +6,7 @@ import { ArticleData } from '../types/articles'
 const articlesDirectory = path.join(process.cwd(), 'articles')
 
 export const getArticle = (id: string, includeContent = false): ArticleData => {
-  const fullPath = path.join(articlesDirectory, `${id}.mdx`)
+  const fullPath = path.join(articlesDirectory, `${id}.md`)
   return getArticleFromFile(fullPath, id, includeContent)
 }
 
