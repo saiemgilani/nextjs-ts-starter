@@ -15,7 +15,7 @@ export const getSortedArticlesData = (): ArticleData[] => {
   const fileNames = fs.readdirSync(articlesDirectory)
   const allArticlesData: ArticleData[] = fileNames.map((fileName) => {
     // Remove ".md" from file name to get id
-    const id = fileName.replace(/\.mdx$/, '')
+    const id = fileName.replace(/\.md$/, '')
 
     // Read markdown file as string
     const fullPath = path.join(articlesDirectory, fileName)

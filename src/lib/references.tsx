@@ -41,7 +41,7 @@ const getReferenceFromFile = (fullPath: string, id: string, includeContent = fal
     id,
     ...matterResult.data,
     content: includeContent ? matterResult.content : null,
-    topics: matterResult.data.topics.split(','),
+    // topics: matterResult.data.topics.split(','),
   } as ReferenceData
 }
 

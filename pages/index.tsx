@@ -1,11 +1,9 @@
 import { getSortedReferencesData } from '../src/lib/references'
 import { GetStaticPropsResult } from 'next'
-import { PostData } from '../src/types/posts'
 import React, { ReactElement } from 'react'
 import { Grid, Typography } from '@material-ui/core'
 import styles from '../styles/Shared.module.css'
 import Box from '@material-ui/core/Box'
-import TopicsDisplay from '../src/components/TopicsDisplay'
 import { ReferenceData } from '../src/types/references'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { PreviewReference } from '../src/components/PreviewReference'
@@ -46,16 +44,13 @@ const Home = ({ referencesData }: { referencesData: ReferenceData[];  }): ReactE
 
 export const getStaticProps = async (): Promise<
   GetStaticPropsResult<{
-    topics: string[]
     referencesData: ReferenceData[]
   }>
 > => {
-  const sortedTopics = ['']
   const referencesData = getSortedReferencesData()
 
   return {
     props: {
-      topics: sortedTopics,
       referencesData: referencesData.filter((pd) => pd.featured),
     },
   }
