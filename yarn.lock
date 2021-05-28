@@ -2308,6 +2308,11 @@ node-libs-browser@^2.2.1:
     util "^0.11.0"
     vm-browserify "^1.0.1"
 
+node-r-runner@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/node-r-runner/-/node-r-runner-0.1.1.tgz#a686b859db93c48f60df2f7c556c86e50b108194"
+  integrity sha512-WX8pXaf0nfgltYVpCNQnuUwI9VSlXmsXGvAgeUQ4tFxHSwlZ9nJWahkPUeZQMFs0/4JnILLdv234WgjFQAmB6g==
+
 node-releases@^1.1.71:
   version "1.1.72"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.72.tgz#14802ab6b1039a79a0c7d662b610a5bbd76eacbe"
