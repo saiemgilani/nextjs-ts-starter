@@ -30,17 +30,14 @@ const Topics = ({ referencesData }: {  referencesData: ReferenceData[] }): React
 
 export const getStaticProps = async (): Promise<
   GetStaticPropsResult<{
-    topics: string[]
     referencesData: ReferenceData[]
   }>
 > => {
-  const sortedTopics = ['']
   const referencesData = getSortedReferencesData()
 
   return {
     props: {
-      topics: sortedTopics,
-      referencesData: referencesData.filter((pd) => pd.featured),
+      referencesData: referencesData,
     },
   }
 }

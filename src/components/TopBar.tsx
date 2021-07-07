@@ -75,12 +75,6 @@ export const TopBar = (): ReactElement => {
               &nbsp;Articles
             </Button>
           </Link>
-          <Link href="/topics">
-            <Button variant="text" color="inherit">
-              <CodeIcon />
-              &nbsp;Topics
-            </Button>
-          </Link>
           <Link  href={`http://github.com/${GH_USER}/${GH_REPO}`}>
             <Button variant="text" color="inherit">
               <GitHubIcon />

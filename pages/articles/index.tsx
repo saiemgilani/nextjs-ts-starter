@@ -19,7 +19,7 @@ const Topics = ({ articlesData }: { articlesData: ArticleData[] }): ReactElement
       </Head>
       <PageHeading title="wehoop Article" />
       {/* <TopicsDisplay topics={topics} n={1000} /> */}
-      <Box pt={12} pb={4}>
+      <Box pt={12} pb={6}>
         <Grid item xs={12}>
           <PreviewArticle articles={articlesData} />
         </Grid>
@@ -30,17 +30,14 @@ const Topics = ({ articlesData }: { articlesData: ArticleData[] }): ReactElement
 
 export const getStaticProps = async (): Promise<
   GetStaticPropsResult<{
-    topics: string[]
     articlesData: ArticleData[]
   }>
 > => {
-  const sortedTopics = ['']
   const articlesData = getSortedArticlesData()
 
   return {
     props: {
-      topics: sortedTopics,
-      articlesData: articlesData.filter((pd) => pd.featured),
+      articlesData: articlesData,
     },
   }
 }

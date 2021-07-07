@@ -77,13 +77,6 @@ const Slug: FC<Props> = ({ articleData, nextPath }): ReactElement => {
         </Card>
       </div> */}
       <div className={styles['article-container']} dangerouslySetInnerHTML={{ __html: marked(articleData.content) }} />
-      <div className={styles['article-container']} style={{ paddingTop: 50 }}>
-        <hr />
-        <Typography variant="h4" component="p" style={{ paddingBottom: 20 }}>
-          Recommended
-        </Typography>
-        <PreviewArticleCard article={nextPath} noMargin />
-      </div>
     </>
   )
 }

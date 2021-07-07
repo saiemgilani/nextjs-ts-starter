@@ -1,19 +1,9 @@
 
 <p align="center">
-<img
-    width=160px
-    src="public/logo/blue.png"
-    alt="saiemgilani.me"
-/>
 </p>
-<h1 align="center">wehoop</h1>
+<h1 align="center">Next.js with Typscript Starter</h1>
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-[![Deployment Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fwehoop%2Fapi%2Fdeployment)](http://saiemgilani.github.io/wehoop)
-
-
-This is the code of my [personal blog](http://saiemgilani.github.io/wehoop).
-It is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 
 ## Executing this project

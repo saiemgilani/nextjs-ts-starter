@@ -51,25 +51,6 @@ const Slug: FC<Props> = ({ referenceData, nextPath }): ReactElement => {
       <div className={styles['text-content']}>
         <PageHeading title={referenceData.title} />
       </div>
-      <div className={styles['image-container']}>
-        <div className={styles.info}>
-          <Typography variant="body1">
-            Written by{' '}
-            <a
-              href="http://www.github.com/saiemgilani"
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-              }}
-            >
-              Saiem <GitHubIcon fontSize="small" style={{ marginLeft: 10 }} />
-            </a>
-          </Typography>
-          {/* <TopicsDisplay topics={referenceData.topics} n={10} noMargin /> */}
-        </div>
-      </div>
       {/* <div className={styles['image-container']}>
         <Card className={styles.image}>
           <CardMedia>
@@ -78,13 +59,7 @@ const Slug: FC<Props> = ({ referenceData, nextPath }): ReactElement => {
         </Card>
       </div> */}
       <div className={styles['reference-container']} dangerouslySetInnerHTML={{ __html: marked(referenceData.content) }} />
-      <div className={styles['reference-container']} style={{ paddingTop: 50 }}>
-        <hr />
-        <Typography variant="h4" component="p" style={{ paddingBottom: 20 }}>
-          Recommended
-        </Typography>
-        {/* <PreviewCard reference={nextPath} noMargin /> */}
-      </div>
+      
     </>
   )
 }
